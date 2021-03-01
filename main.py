@@ -27,13 +27,12 @@ pdfFileObj.close()
 
 text = "".join(text)
 
-authenticator = IAMAuthenticator('1er7KcbcUw91tYVf3_MhdYVBnhBRrq3reSwN8dHdV3CJ')
+authenticator = IAMAuthenticator('')
 text_to_speech = TextToSpeechV1(
     authenticator=authenticator
 )
 
-text_to_speech.set_service_url(
-    'https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/e0f75cef-dcf8-4cb9-98c3-b465561e068a')
+text_to_speech.set_service_url('')
 
 with open('audiobook.wav', 'wb') as audio_file:
     audio_file.write(
